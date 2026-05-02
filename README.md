@@ -46,7 +46,7 @@ This mode securely captures your screen and uses VideoDB's real-time AI to ident
    ```bash
    cd /path/to/videodb
    source .venv/bin/activate
-   python scripts/ws_listener.py --clear /tmp
+   python videodb_tracker/ws_listener.py --clear /tmp
    ```
    *Leave this running in the background.*
 
@@ -76,34 +76,6 @@ This mode securely captures your screen and uses VideoDB's real-time AI to ident
    python videodb_tracker/history.py
    ```
    Alternatively, you can manage your videos directly on the [VideoDB Timeline Dashboard](https://console.videodb.io/timeline).
-
----
-
-## Mode 2: Local Tracker (macOS AppKit)
-
-This mode runs entirely on your local machine using the `NSWorkspace` API to detect when you switch between macOS applications. It does not record video or use AI.
-
-### Step-by-Step Instructions
-
-1. **Start Tracking**
-   Run the tracker in the background. It will automatically save events to the `data/` folder.
-   ```bash
-   cd /path/to/videodb/focus-tracker
-   source ../.venv/bin/activate
-   python local_tracker/tracker.py &
-   ```
-
-2. **Generate the Summary**
-   You can run the summary script at any time to see your progress:
-   ```bash
-   python local_tracker/summary.py
-   ```
-
-3. **Stop Tracking**
-   To stop the local tracker, you can kill the background process using the automatically generated PID file:
-   ```bash
-   kill $(cat data/tracker.pid)
-   ```
 
 ---
 
