@@ -6,7 +6,7 @@ A screen-aware focus tracking application that logs and summarizes the time you 
 
 ```text
 focus-tracker/
-├── local_tracker/       # Fast, lightweight tracker using macOS AppKit
+
 ├── videodb_tracker/     # AI-powered visual tracking using VideoDB Screen Capture
 ├── data/                # Local data storage for events and PIDs
 ├── examples/            # Example scripts (e.g., upload and search)
